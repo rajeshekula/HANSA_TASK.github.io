@@ -56,8 +56,9 @@
 
 			$scope.data = [];
 
-			$http.get("https://api.population.io/1.0/population/2018/India/").
+			$http.get("http://www.json-generator.com/api/json/get/bVmCHuBzkO?indent=2").
 				then(function(data) {
+
 					angular.forEach(data.data, function(chartBarData,key) {
 						if (key >=10 && key<=20){
 							$scope.males.push(chartBarData.males);
@@ -94,4 +95,6 @@
 
 			};
 		}
-      }()); 
+
+    }());
+     
