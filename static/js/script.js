@@ -15,7 +15,7 @@
 				document.getElementById('img-link').href=dataURL;
 
 			};
-			$http.get("http://www.json-generator.com/api/json/get/clayCfTkzm?indent=2").
+			$http.get("https://www.json-generator.com/api/json/get/clayCfTkzm?indent=2").
 				then(function(data) {
 					angular.forEach(data.data, function(chartLineData,key) {
 						$scope.data.push(chartLineData.chart);
@@ -26,10 +26,10 @@
 
 		angular.module("app").controller('DoughnutCtrl',['$scope','$http',DoughnutCtrl]);
 		function DoughnutCtrl($scope,$http){
-			$scope.labels = []//"Download Sales", "In-Store Sales", "Mail-Order Sales"];
-			$scope.data = []//300, 500, 100];
+			$scope.labels = [];
+			$scope.data = [];
 
-			$http.get("http://api.population.io:80/1.0/population/2018/aged/18/").
+			$http.get("https://api.population.io:80/1.0/population/2018/aged/18/").
 				then(function(data) {
 					angular.forEach(data.data, function(chartDoughnutData,key) {
 						if (key <=9){
@@ -54,7 +54,7 @@
 
 			$scope.data = [];
 
-			$http.get("http://api.population.io/1.0/population/2018/India/").
+			$http.get("https://api.population.io/1.0/population/2018/India/").
 				then(function(data) {
 					angular.forEach(data.data, function(chartBarData,key) {
 						if (key >=10 && key<=20){
@@ -76,8 +76,8 @@
 
 		angular.module("app").controller('PieCtrl',['$scope','$http',PieCtrl]);
 		function PieCtrl($scope,$http) {
-			$scope.labels = [];//"Download Sales", "In-Store Sales", "Mail-Order Sales"];
-  			$scope.data = [];//300, 500, 100];
+			$scope.labels = [];
+  			$scope.data = [];
 
 			$http.get("https://api.data.gov.in/resource/7a82b08b-d7fe-4edb-82f7-216a1f1bed07?api-key=579b464db66ec23bdd000001cdd3946e44ce4aad7209ff7b23ac571b&format=json&offset=0&limit=10").
 				then(function(data) {
