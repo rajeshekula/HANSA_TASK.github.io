@@ -56,7 +56,7 @@
 
 			$scope.data = [];
 
-			$http.get("http://www.json-generator.com/api/json/get/bVmCHuBzkO?indent=2").
+			$http.get("https://www.json-generator.com/api/json/get/bVmCHuBzkO?indent=2").
 				then(function(data) {
 
 					angular.forEach(data.data, function(chartBarData,key) {
